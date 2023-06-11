@@ -1,3 +1,12 @@
+# NLP assignment
+based on [this](https://github.com/alexa/massive) repo
+
+## Setup guide
+- setup appropriate python virtual environment (`requirements.txt`)
+- download pretrained xml-roberta `cd pretrained_model && ./download.sh && cd ..`
+- run `./run.sh`
+___
+
 # MASSIVE
 
 :point_right: Join the MMNLU-22 [slack workspace](https://join.slack.com/t/mmnlu-22/shared_invite/zt-1c5p3d3hw-8Ou0QJahOUrEzt5YDYl5Dw) here :point_left:
