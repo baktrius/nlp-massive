@@ -5,4 +5,9 @@ src/massive/**/__pycache__/*
 .idea/
 __pycache__/
 .DS_Store
-
+data/dataset
+data/dataset_pl
+pretrained_model/pytorch_model.bin
+pretrained_model/sentencepiece.bpe.model
+tmp/
+.python-version
