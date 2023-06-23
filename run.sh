@@ -1,2 +1,2 @@
 #!/bin/bash
-PYTHONPATH=src/ python scripts/train.py -c config.yml
+PYTHONPATH=src/ python scripts/train.py -c cont_config.yml

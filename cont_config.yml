@@ -5,7 +5,7 @@ max_length: &max_length 512
 model:
   type: xlmr intent classification slot filling
   size: base
-  pretrained_weights: pretrained_model/pytorch_model.bin
+  pretrained_weights: ../nlp2/tmp/test-mlm/pytorch_model.bin
   pretrained_weight_substring_transform: ['roberta', 'xlmr']
   strict_load_pretrained_weights: false
   model_config_args:
@@ -35,7 +35,7 @@ model:
 tokenizer:
   type: xlmr base
   tok_args:
-    vocab_file: pretrained_model/sentencepiece.bpe.model
+    vocab_file: ../nlp2/tmp/test-mlm/sentencepiece.bpe.model
     max_len: *max_length
 
 collator:
@@ -56,8 +56,8 @@ train_val:
     output_dir: tmp/checkpoints/xlmr_base_20220411/
     logging_dir: tmp/logging/xlmr_base_20220411/
     save_strategy: steps
-    save_steps: 500
-    save_total_limit: 10
+    save_steps: 5000
+    save_total_limit: 5
     evaluation_strategy: epoch
     learning_rate: 2.8e-05
     lr_scheduler_type: constant_with_warmup
@@ -69,7 +69,7 @@ train_val:
     gradient_accumulation_steps: 1
     per_device_train_batch_size: 128
     per_device_eval_batch_size: 128
-    num_train_epochs: 26
+    num_train_epochs: 100
     remove_unused_columns: false
     label_names:
       - intent_num
